@@ -11,7 +11,7 @@ module Repack
     #
     # Will raise an error if our manifest can't be found or the entry point does
     # not exist.
-    def webpack_asset_paths(source, extension: nil)
+    def webpack_asset_paths(source, extension = nil)
       return "" unless source.present?
 
       paths = Repack::Manifest.asset_paths(source)
